@@ -7,7 +7,7 @@ const SettingItemCard = () => {
     <div className="flex flex-col p-3 h-min items-start rounded-xl shadow-sm shadow-gray">
       <div className="flex justify-between items-start gap-3">
         <div className="p-1 rounded-md">
-          <IconButton icon={faUser} className="bg-primary text-white rounded-md"/>
+          <IconButton icon={faUser} className="bg-primary text-white rounded-md px-3 py-2"/>
         </div>
         <div>
           <h1 className="font-semibold text-2xl text-primary">Account</h1>
