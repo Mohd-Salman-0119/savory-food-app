@@ -1,5 +1,6 @@
 import FevoriteItemCard from "./components/miscellaneous/FevoriteItemCard";
 import HomeItemCard from "./components/miscellaneous/HomeItemCard";
+import MyDeliver from "./components/miscellaneous/MyDeliver";
 import OrderItemCard from "./components/miscellaneous/OrderItemCard";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <OrderItemCard />
         <FevoriteItemCard />
         <HomeItemCard />
+        <MyDeliver />
       </div>
     </div>
   );

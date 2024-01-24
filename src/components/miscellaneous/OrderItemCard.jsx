@@ -4,8 +4,8 @@ import { faCheck, faStar } from "@fortawesome/free-solid-svg-icons";
 
 const OrderItemCard = () => {
   return (
-    <div className="border-4 border-white rounded-xl shadow-md flex flex-col gap-2">
-      <div className="p-3">
+    <div className="rounded-xl shadow-sm shadow-gray flex flex-col gap-2 py-3">
+      <div className="px-3">
         <div className="flex justify-between">
           <h1 className="font-bold text-xl">Order #1</h1>
           <IconTextButton
@@ -17,9 +17,11 @@ const OrderItemCard = () => {
 
         <p className="text-gray">Jun 24, 2023, 12:35 PM</p>
       </div>
-
-      <OrderItem/>
-      <OrderItem/>
+      <div className="overflow-scroll h-[8.5rem]">
+        <OrderItem />
+        <OrderItem />
+     
+      </div>
 
       <div className="bg-light-vanila flex flex-col gap-2 p-3">
         <div className="flex justify-between">
@@ -37,7 +39,10 @@ const OrderItemCard = () => {
           <p className="text-xs">x2 Item</p>
           <h3 className="font-semibold">$11.23</h3>
         </div>
-        <IconTextButton icon={faCheck} text={"Completed"} className="border-[1px] border-gray text-primary px-4 rounded-md py-1"
+        <IconTextButton
+          icon={faCheck}
+          text={"Completed"}
+          className="border-[1px] border-gray text-primary px-4 rounded-md py-1"
         />
       </div>
     </div>

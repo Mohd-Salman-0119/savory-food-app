@@ -23,7 +23,7 @@ const FevoriteItemCard = ({
     setLike((p) => !p);
   };
   return (
-    <div className="bg-light-blue p-3 border-4 border-white rounded-xl shadow-md flex flex-col gap-2">
+    <div className="bg-light-blue p-3 border-4 border-white rounded-xl shadow-sm shadow-gray flex flex-col gap-2">
       <div className="flex justify-between">
         <img
           src="https://i.pinimg.com/564x/50/7e/0d/507e0d8a384c12c41f2e67f41cfd19b7.jpg"
