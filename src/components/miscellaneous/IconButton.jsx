@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const IconButton = ({ icon, onClick, className = "rounded-md" }) => {
+const IconButton = ({ icon, onClick, className = "rounded-md bg-white text-primary" }) => {
   return (
     <div
-      className={`bg-white px-3 py-2 text-primary ${className}`}
+      className={` px-3 py-2 ${className}`}
       onClick={onClick}
     >
       <FontAwesomeIcon icon={icon} />
