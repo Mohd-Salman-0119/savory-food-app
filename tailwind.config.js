@@ -9,7 +9,7 @@ export default {
       colors: {
         "light-pink": "#ffe9f8",
         "light-sky": "#e9ffff",
-        "light-orange": "#fff4eb",
+        "light-orange": "#fceacf",
         "light-vanila": "#f1f8e8",
         "light-blue": "#e9f7ff",
         "primary": "#73b915",
