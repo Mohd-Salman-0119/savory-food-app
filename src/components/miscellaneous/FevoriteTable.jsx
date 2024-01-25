@@ -1,28 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import CheckBox from "./CheckBox";
-import { PencilIcon, UserPlusIcon } from "@heroicons/react/24/solid";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import {
-  Card,
-  CardHeader,
-  Input,
   Typography,
-  Button,
   CardBody,
-  Chip,
-  CardFooter,
-  Tabs,
-  TabsHeader,
-  Tab,
   Avatar,
-  IconButton,
-  Tooltip,
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
+import {
+  fevoriteItemAccordionBody,
+  fevoriteItemAccordionHead,
+} from "../Constants/accordion";
+import AccordionTable from "./AccordionTable";
 
 const TABLE_HEAD = ["Menu", "Customer Since", "Order Date"];
 
@@ -96,7 +88,7 @@ const FevoriteTable = () => {
   console.log(isVisible);
   return (
     <>
-      <div className="h-full w-full p-2 bg-blue-600 shadow-sm shadow-gray rounded-md">
+      <div className="h-full w-full p-2 shadow-sm shadow-gray rounded-md">
         <CardBody className="overflow-scroll">
           {isVisible ? (
             <table className="mt-4 w-full min-w-max table-auto text-left">
@@ -233,75 +225,20 @@ const FevoriteTable = () => {
                         </Typography>
                       </div>
                     </div>
-                    <FontAwesomeIcon icon={faAngleRight} className={`${open === 1 ? "rotate-90 transition-all duration-150":"transition-all duration-150"} text-sm`}/>
+                    <FontAwesomeIcon
+                      icon={faAngleRight}
+                      className={`${
+                        open === 1
+                          ? "rotate-90 transition-all duration-150"
+                          : "transition-all duration-150"
+                      } text-sm`}
+                    />
                   </div>
                 </AccordionHeader>
-                <AccordionBody className="mt-1 flex flex-col">
-                  <table className="w-full min-w-max table-auto text-left">
-                    <thead>
-                      <tr>
-                        <th className="border-b border-gray bg-blue-gray-50/50 p-2">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal leading-none opacity-70 flex gap-12 sm:text-base text-xs"
-                          >
-                            <h1>Menu</h1>
-                          </Typography>
-                        </th>
-                        <th className="border-b border-gray bg-blue-gray-50/50 p-2">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal leading-none opacity-70 flex gap-12 sm:text-base text-xs"
-                          >
-                            <h1>Customer Since</h1>
-                          </Typography>
-                        </th>
-                        <th className="border-b border-gray bg-blue-gray-50/50 p-2">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal leading-none opacity-70 flex gap-12 sm:text-base text-xs"
-                          >
-                            <h1>Order Date</h1>
-                          </Typography>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr >
-                        <td className="p-2">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal sm:text-base text-xs"
-                          >
-                            Fish Burger
-                          </Typography>
-                        </td>
-                        <td className="p-2">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal sm:text-base text-xs"
-                          >
-                            User since 2023
-                          </Typography>
-                        </td>
-                        <td className="p-2">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal sm:text-base text-xs"
-                          >
-                            Jan 25, 2024
-                          </Typography>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </AccordionBody>
+                <AccordionTable
+                  head={fevoriteItemAccordionHead}
+                  body={fevoriteItemAccordionBody}
+                />
               </Accordion>
             </div>
           )}
