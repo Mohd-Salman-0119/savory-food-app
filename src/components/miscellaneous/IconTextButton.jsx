@@ -5,7 +5,7 @@ const IconTextButton = ({icon, text, className}) => {
   return (
     <div className={`flex justify-between items-center py-1 gap-2 ${className}`}>
       <FontAwesomeIcon icon={icon}/>
-      <h1 className='font-semibold'>{text}</h1>
+      <h1>{text}</h1>
     </div>
   )
 }

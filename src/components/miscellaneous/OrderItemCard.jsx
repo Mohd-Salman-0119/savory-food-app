@@ -18,9 +18,8 @@ const OrderItemCard = () => {
         <p className="text-gray">Jun 24, 2023, 12:35 PM</p>
       </div>
       <div className="overflow-scroll h-[8.5rem]">
-        <OrderItem />
-        <OrderItem />
-     
+        <OrderItem className="px-3" />
+        <OrderItem className="px-3" />
       </div>
 
       <div className="bg-light-vanila flex flex-col gap-2 p-3">
@@ -51,9 +50,9 @@ const OrderItemCard = () => {
 
 export default OrderItemCard;
 
-const OrderItem = () => {
+export const OrderItem = ({ children }) => {
   return (
-    <div className="flex justify-between items-center mt-2 px-3">
+    <div className={`flex justify-between items-center mt-2${children}`}>
       <div className="flex gap-3 items-center">
         <img
           src="https://i.pinimg.com/564x/ac/e2/18/ace218a4f4b81019717b67dffe6dfa45.jpg"
