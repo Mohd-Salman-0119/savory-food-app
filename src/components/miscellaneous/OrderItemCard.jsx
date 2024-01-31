@@ -22,16 +22,16 @@ const OrderItemCard = () => {
         <OrderItem className="px-3" />
       </div>
 
-      <div className="bg-light-vanila flex flex-col gap-2 p-3">
-        <div className="flex justify-between">
-          <h5>Delivery Time</h5>
-          <h5 className="font-semibold">10 Min</h5>
-        </div>
-        <div className="flex justify-between">
-          <h5>Distance</h5>
-          <h5 className="font-semibold">2.5 Km</h5>
-        </div>
-      </div>
+      <DeliveryInfo
+        className="bg-light-vanila p-3"
+        name="Delivery Time"
+        value="10 Min"
+      />
+      <DeliveryInfo
+        className="bg-light-vanila p-3"
+        name="Distance"
+        value="2.5 Km"
+      />
 
       <div className="p-3 flex justify-between items-center">
         <div>
@@ -67,3 +67,17 @@ export const OrderItem = ({ children }) => {
     </div>
   );
 };
+
+// todo: need to pass prpes
+export const DeliveryInfo = ({ className, name, value }) => {
+  return (
+    <div className={`${className} flex flex-col gap-2`}>
+      <div className="flex justify-between">
+        <h5>{name}</h5>
+        <h5 className="font-semibold">{value}</h5>
+      </div>
+    </div>
+  );
+};
+
+

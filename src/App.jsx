@@ -1,7 +1,6 @@
 import BillAccordionTable from "./components/miscellaneous/BillAccordionTable";
 import CategorieItemCard from "./components/miscellaneous/CategorieItemCard";
 import ChatUserItem from "./components/miscellaneous/ChatUserItem";
-import { DialogSizes } from "./components/miscellaneous/DialogSizes";
 import EvaluatedButton from "./components/miscellaneous/EvaluatedButton";
 import FevoriteItemCard from "./components/miscellaneous/FevoriteItemCard";
 import FevoriteTable from "./components/miscellaneous/FevoriteTable";
@@ -17,9 +16,8 @@ import SettingItemCard from "./components/miscellaneous/SettingItemCard";
 
 function App() {
   return (
-    <div className="p-5">
+    <div className="p-5 flex flex-col gap-6">
       <BillAccordionTable />
-
     </div>
   );
 }
