@@ -18,7 +18,8 @@ export default {
         "app-pink": "#FD79D3",
         "app-orange": "#e3893d",
         "app-purple": "#8565CB",
-        "gray": "#c2c7d0"
+        "gray": "#c2c7d0",
+        "secondary":"#e8eae7"
       },
       screens: {
         '2sm': '350px',

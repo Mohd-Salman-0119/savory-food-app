@@ -3,7 +3,7 @@ import React from 'react'
 
 const IconTextButton = ({icon, text, className}) => {
   return (
-    <div className={`flex justify-between items-center py-1 gap-2 ${className}`}>
+    <div className={`items-center py-1 gap-2 flex ${className}`}>
       <FontAwesomeIcon icon={icon}/>
       <h1>{text}</h1>
     </div>

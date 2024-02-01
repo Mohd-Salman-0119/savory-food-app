@@ -11,7 +11,7 @@ const OrderItemCard = () => {
           <IconTextButton
             icon={faStar}
             text="5.0K"
-            className="rounded-md bg-primary text-white w-min px-3"
+            className="rounded-md bg-primary text-white w-min px-3 flex justify-between"
           />
         </div>
 
@@ -41,7 +41,7 @@ const OrderItemCard = () => {
         <IconTextButton
           icon={faCheck}
           text={"Completed"}
-          className="border-[1px] border-gray text-primary px-4 rounded-md py-1"
+          className="border-[1px] border-gray text-primary px-4 rounded-md py-1 flex justify-between "
         />
       </div>
     </div>
