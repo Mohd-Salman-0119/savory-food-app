@@ -43,7 +43,7 @@ const FevoriteItemCard = ({
       </div>
       <div className="flex justify-between items-center mt-2">
         <h2 className="font-bold text-base">$9.89</h2>
-        <IconTextButton text="Add" icon={faPlus}  className="bg-primary text-white rounded-xl w-max px-4"/>
+        <IconTextButton text="Add" icon={faPlus}  className="bg-primary text-white rounded-xl w-max px-4 flex justify-between"/>
       </div>
     </div>
   );

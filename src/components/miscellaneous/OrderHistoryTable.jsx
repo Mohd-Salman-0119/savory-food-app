@@ -26,6 +26,7 @@ const TABLE_HEAD = [
   "Total",
   "Status",
   "Card Number",
+  "Action",
 ];
 
 const TABLE_ROWS = [
@@ -77,8 +78,8 @@ const OrderHistoryTable = () => {
   console.log(isVisible);
   return (
     <>
-      <div className="h-full w-full p-2 shadow-sm shadow-gray rounded-md">
-        <CardBody className="overflow-scroll">
+      <div className="w-full p-2 shadow-sm shadow-gray rounded-md">
+        <CardBody>
           {isVisible ? (
             <table className="mt-4 w-full min-w-max table-auto text-left">
               <thead>
@@ -162,15 +163,55 @@ const OrderHistoryTable = () => {
                   <td className="p-3">
                     <div>4048 5684 7826 7668</div>
                   </td>
-                
+                  <td className="p-3">
+                    <div>
+                      <FontAwesomeIcon icon={faEllipsisVertical} />
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
           ) : (
             <div className="overflow-hidden">
+              <Accordion className="bg-white px-3 py-2 rounded-md items-center my-1 shadow-sm shadow-gray">
+                <AccordionHeader className="border-none">
+                  <div className="flex justify-between w-full items-center">
+                    <div className="flex items-center sm:gap-6 gap-3">
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        <CheckBox />
+                      </Typography>
+                      <div className="flex flex-col">
+                        <Typography
+                          variant="small"
+                          color="blue-gray"
+                          className="font-semibold"
+                        >
+                          {"Menu"}
+                        </Typography>
+                      </div>
+                    </div>
+                    <Typography
+                      variant="small"
+                      color="blue-gray"
+                      className="flex gap-2 items-center font-semibold"
+                    >
+                      Status
+                    </Typography>
+                    <Typography
+                      variant="small"
+                      color="blue-gray"
+                      className="flex gap-2 items-center font-semibold"
+                    ></Typography>
+                  </div>
+                </AccordionHeader>
+              </Accordion>
               <Accordion
                 open={open === 1}
-                className="bg-blue-100 px-3 py-1 rounded-md items-center my-1"
+                className="bg-white px-3 py-1 rounded-md items-center shadow-sm shadow-gray"
               >
                 <AccordionHeader
                   onClick={() => handleOpen(1)}

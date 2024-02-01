@@ -1,3 +1,5 @@
+import { useState } from "react";
+import BillAccordionTable from "./components/miscellaneous/BillAccordionTable";
 import CategorieItemCard from "./components/miscellaneous/CategorieItemCard";
 import ChatUserItem from "./components/miscellaneous/ChatUserItem";
 import EvaluatedButton from "./components/miscellaneous/EvaluatedButton";
@@ -12,11 +14,15 @@ import OutlineButton from "./components/miscellaneous/OutlineButton";
 import ReviewerItemCard from "./components/miscellaneous/ReviewerItemCard";
 import SearchFeild from "./components/miscellaneous/SearchFeild";
 import SettingItemCard from "./components/miscellaneous/SettingItemCard";
+import MainRoutes from "./routes/MainRoutes";
+import DrawerComponents from "./components/miscellaneous/DrawerComponents";
+import DrawerContainer from "./components/DrawerContainer";
 
 function App() {
   return (
-    <div className="p-5">
-      <OrderHistoryTable />
+    <div className="bg-app-orange/60 h-svh w-auto flex md:flex-row flex-col relative">
+      <DrawerContainer /> 
+      <MainRoutes/>
     </div>
   );
 }
