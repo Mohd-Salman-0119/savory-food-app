@@ -1,11 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import DrawerComponents from "../components/miscellaneous/DrawerComponents";
+import HomeScreen from "../screen/HomeScreen";
 
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<h1>Home</h1>} />
+      <Route path="/" element={<HomeScreen text="Home" />} />
       <Route path="/foodOrder" element={<h1>Food Order</h1>} />
       <Route path="/fevoriteMenu" element={<h1>Fevorite Menu</h1>} />
       <Route path="/messages" element={<h1>Messages</h1>} />

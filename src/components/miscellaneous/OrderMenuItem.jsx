@@ -1,8 +1,8 @@
 import React from "react";
 
-const OrderMenuItem = () => {
+const OrderMenuItem = ({className}) => {
   return (
-    <div className="flex justify-between p-3 h-min items-center rounded-xl shadow-sm shadow-gray">
+    <div className={`flex justify-between p-3 h-min items-center ${className}`}>
       <div className="flex justify-between items-center gap-3">
         <div className="p-1 bg-light-orange rounded-md">
           <img
