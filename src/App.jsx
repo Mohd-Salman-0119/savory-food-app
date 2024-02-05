@@ -20,7 +20,7 @@ import DrawerContainer from "./components/DrawerContainer";
 
 function App() {
   return (
-    <div className="bg-app-orange/60 h-svh w-auto flex md:flex-row flex-col relative">
+    <div className="h-svh w-auto flex md:flex-row flex-col overflow-scroll bg-blue-300">
       <DrawerContainer /> 
       <MainRoutes/>
     </div>

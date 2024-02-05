@@ -4,10 +4,13 @@ import IconButton from "./miscellaneous/IconButton";
 import {
   faBars,
   faBell,
+  faEnvelope,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import DrawerComponents from "./miscellaneous/DrawerComponents";
 import Sidebar from "./miscellaneous/Sidebar";
+import SearchFeild from "./miscellaneous/SearchFeild";
+import { Avatar } from "@material-tailwind/react";
 
 const DrawerContainer = () => {
   const [isVisible, setIsVisible] = useState(window.innerWidth >= 768);
@@ -41,7 +44,7 @@ const DrawerContainer = () => {
   console.log("isOpen", isOpen);
 
   return (
-    <div>
+    <div className="md:flex md:flex-row sticky top-0 left-0 bottom-0 h-svh">
       {/* Small screen bar */}
       <div className="flex justify-between p-2 items-center md:hidden z-0 sticky top-0 left-0 right-0">
         <div>
@@ -63,6 +66,7 @@ const DrawerContainer = () => {
           />
         </div>
       </div>
+
       {isVisibleOnSmall && (
         <DrawerComponents isOpen={isOpen} onHandleBurgur={setIsOpen} />
       )}
