@@ -27,7 +27,7 @@ import IconTextButton from "./IconTextButton";
 const Sidebar = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-green-600 p-3 shadow-sm shadow-gray overflow-scroll w-80 top-0 left-0 bottom-0 right-0 z-50 flex-1 h-auto sticky ">
+    <div className="bg-white p-3 shadow-sm shadow-gray overflow-scroll top-0 left-0 bottom-0 right-0 z-50 h-svh sticky w-1/4 md:flex hidden flex-col">
       <Typography className="px-5 my-5 flex justify-between items-center">
         <img src={logoWithText} className="w-1/2" />
       </Typography>
